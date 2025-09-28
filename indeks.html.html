@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="ms">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Welcome to my website</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Comic+Neue:wght@700&display=swap');
+    body {
+      margin: 0;
+      font-family: 'Comic Neue', cursive, sans-serif;
+      background: linear-gradient(to right, #fbc2eb, #a6c1ee);
+      text-align: center;
+      color: #333;
+    }
+    header {
+      background-color: #ff85a2;
+      color: white;
+      padding: 25px;
+      font-size: 2rem;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+    }
+    .container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      margin-top: 40px;
+      gap: 30px;
+    }
+    .app-button {
+      background: white;
+      border: none;
+      border-radius: 20px;
+padding: 15px 25px;
+      width: 180px;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+    }
+    .app-button:hover {
+      transform: scale(1.05);
+      background-color: #f0f0f0;
+    }
+    .app-button img {
+      width: 40px;
+      height: 40px;
+    }
+    .app-name {
+      margin-top: 10px;
+      font-weight: bold;
+      font-size: 1.1rem;
+    }
+    footer {
+      margin-top: 50px;
+      padding: 15px;
+      background: #ff85a2;
+      color: white;
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  Laman Web Untuk Buka Apps
+</header>
+
+<div class="container">
+  <button class="app-button" onclick="openApp('https://www.tiktok.com')">
+    <img src="https://upload.wikimedia.org/wikipedia/en/a/a9/TikTok_logo.svg" alt="TikTok">
+    <div class="app-name">TikTok</div>
+  </button>
+
+  <button class="app-button" onclick="openApp('https://www.youtube.com')">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/4/42/YouTube_icon_%282013-2017%29.png" alt="YouTube">
+    <div class="app-name">YouTube</div>
+  </button>
+
+  <button class="app-button" onclick="openApp('https://web.whatsapp.com')">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp">
+    <div class="app-name">WhatsApp</div>
+</button>
+
+  <button class="app-button" onclick="openApp('https://web.telegram.org')">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/8/82/Telegram_logo.svg" alt="Telegram">
+    <div class="app-name">Telegram</div>
+  </button>
+
+  <button class="app-button" onclick="openApp('https://www.canva.com')">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/3/3e/Canva_Logo.png" alt="Canva">
+    <div class="app-name">Canva</div>
+  </button>
+</div>
+
+<audio id="clickSound" src="https://www.soundjay.com/buttons/sounds/button-16.mp3" preload="auto"></audio>
+
+<footer>
+  &copy; 2025 Laman Web Ceria
+</footer>
+
+<script>
+  function openApp(url) {
+    document.getElementById("clickSound").play();
+    window.open(url, '_blank');
+  }
+</script>
+
+</body>
+</html>
